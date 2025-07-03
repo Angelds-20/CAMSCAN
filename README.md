@@ -1,30 +1,30 @@
 # 🔍 CAMSCAN
 
-Escáner modular de red local para detectar dispositivos con UPnP habilitado, cámaras IP y puertos abiertos comunes. Desarrollado en Bash con soporte para logs automáticos.
+Modular local network scanner to detect devices with UPnP enabled, IP cameras, and common open ports. Developed in Bash with support for automatic logging.
 
 ---
 
-## ⚙️ Características
+## ⚙️ Features
 
-- Escaneo UPnP (puerto 1900 UDP)
-- Detección de cámaras IP y servicios sospechosos (`23`, `80`, `554`, `8080`, `5000`, `37777`)
-- Visualización de mapeos activos UPnP (`upnpc`)
-- Logging automático por fecha
-- Uso sin parámetros = autodetección de subred local (`x.x.x.0/24`)
+- UPnP scanning (UDP port 1900)
+- Detection of IP cameras and suspicious services (`23`, `80`, `554`, `8080`, `5000`, `37777`)
+- Display of active UPnP mappings (`upnpc`)
+- Automatic date-based logging
+- No parameters = automatic detection of local subnet (`x.x.x.0/24`)
 
 ---
 
-## 🛠️ Requisitos
+## 🛠️ Requirements
 
 - `nmap`
-- (opcional) `upnpc` → instalar con `sudo pacman -S miniupnpc` --  `sudo apt update && sudo apt install miniupnpc`
+- (optional) `upnpc` → install with `sudo pacman -S miniupnpc` -- `sudo apt update && sudo apt install miniupnpc`
 
 ---
 
-## ▶️ Uso
+## ▶️ Usage
 
 ```bash
 cd CAMSCAN && cd camscan
 chmod +x camscan.sh
-./scan_red.sh              # Usa la red local por defecto
-./scan_red.sh 192.168.1.0/24  # O especificá una subred/IP
+./scan_red.sh              # Uses local network by default
+./scan_red.sh 192.168.1.0/24  # Or specify a subnet/IP
