@@ -17,13 +17,14 @@ Escáner modular de red local para detectar dispositivos con UPnP habilitado, c�
 ## 🛠️ Requisitos
 
 - `nmap`
-- (opcional) `upnpc` → instalar con `sudo pacman -S miniupnpc`
+- (opcional) `upnpc` → instalar con `sudo pacman -S miniupnpc` --  `sudo apt update && sudo apt install miniupnpc`
 
 ---
 
 ## ▶️ Uso
 
 ```bash
+cd CAMSCAN && cd camscan
 chmod +x camscan.sh
-./camscan.sh              # Usa la red local por defecto
-./camscan.sh 192.168.1.0/24  # O especificá una subred/IP
+./scan_red.sh              # Usa la red local por defecto
+./scan_red.sh 192.168.1.0/24  # O especificá una subred/IP
